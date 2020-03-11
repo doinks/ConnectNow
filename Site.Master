@@ -1,0 +1,100 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="ConnectNow.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ConnectNow</title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+
+    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+        <script src="https://cdn.tiny.cloud/1/s1m4bhiizv69530y2qop0ijrxfbgqba37cgg779h985vyobx/tinymce/5/tinymce.min.js" referrerpolicy="origin"/></script>
+    
+
+
+           <script>
+    tinymce.init({
+      selector: '#mytextarea'
+    });
+  </script>
+
+</head>
+<body>
+    <form runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+            </Scripts>
+        </asp:ScriptManager>
+
+        <div class="navbar navbar-inverse">
+            <div class="container">
+                <div class="navbar-header">
+
+                    <div class="row">
+                        <div class="col-md-5 info">
+                            <a class="" runat="server" href="Default.aspx">
+                                <img src="images/logo1.png" height="43" class="topLogo" />
+                            </a>
+                        </div>
+                        <div class="col-md-7 loginForm">
+                            <% if (HttpContext.Current.Request.Url.AbsolutePath.ToLower().LastIndexOf("default") >= 0)
+                                { %>
+                                <div class="form-inline float-right">
+                                    <!--<input style="margin-left:100px; type="text" placeholder="Email address*" class="form-control" />-->
+                                    <asp:TextBox style="border:1px solid black; margin-left:150px;text-align-last:center; " ID="UserName" CssClass="form-control" placeholder="Username" runat="server"></asp:TextBox>
+                                    <!--<input style="margin-left:25px;" type="password" placeholder="Password*" class="form-control" />-->
+                                    <asp:TextBox style=" border:1px solid black;margin-left:2px; text-align-last:center;" TextMode="Password" ID="PassWord" CssClass="form-control" placeholder="Password" runat="server"></asp:TextBox>
+                                    <!--<a style="float:right;" href="News.aspx" class="btn">&nbsp;Login&nbsp;</a>-->
+                                    <asp:Button style="margin-top:1px;float:right; background-color:#BF0E14;" ID="LogIn" CssClass="btn" runat="server" Text="Log In" OnClick="LogIn_Click"/>
+                                </div>
+                            <%} else { %>
+                                <div class="form-inline float-right">
+                                    <span style="padding-top:0px; vertical-align:middle;"
+                                    </span>&nbsp;
+                                       <!--<a style="margin-left:355px" href="Profile.aspx" class="btn">&nbsp;Account&nbsp;</a>&nbsp;-->
+                                    <asp:Button style="margin-left:482px" ID="ProFile" CssClass="btn" runat="server" Text="Account" OnClick="ProFile_Click"/>
+                                       <!--<a href="MessageInbox.aspx" class="btn">&nbsp;Messages&nbsp;</a>&nbsp;-->
+                                    <!--<asp:Button ID="MessageInbox" CssClass="btn" runat="server" Text="Messages" OnClick="MessageInbox_Click"/>-->
+                                       <!--<a href="Default.aspx" class="btn">&nbsp;Sign Out&nbsp;</a>&nbsp;-->
+                                    <asp:Button ID="SignOut" CssClass="btn" runat="server" Text="Sign Out" OnClick="SignOut_Click"/>
+                                </div>
+                            <%} %>
+                        </div>
+                    </div>
+
+                </div>                
+            </div>
+        </div>
+        <div class="container body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <hr />
+            <footer>
+                <p style="text-align:center;">&copy; <%: DateTime.Now.Year %> - ConnectNow</p>
+
+            </footer>
+        </div>
+
+    </form>
+</body>
+</html>
