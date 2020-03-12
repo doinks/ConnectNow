@@ -1,0 +1,378 @@
+﻿body {
+    font-family: 'Kanit', sans-serif;
+    background-color: #E3E3EA;
+}
+
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+input {
+    background-color: #BF0E14;
+    color: white;
+    border-radius: 0px;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    max-width: 280px;
+    font-weight: bold;
+}
+
+select,
+textarea {
+    max-width: 280px;
+    background-color: #E3E3E3;
+    font-weight: bold;
+}
+
+
+@media screen and (min-width: 768px) {
+    .jumbotron {
+        margin-top: 20px;
+    }
+
+    .body-content {
+        padding: 0;
+    }
+}
+
+.navbar-header {
+    float:  unset;
+}
+.loginForm {
+    float: right;
+    padding-top: 8px;
+}
+.btn {
+    background-color: #BF0E14;
+    color: white;
+    border-radius: 0px;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+.topLogo {
+    padding-top: 8px;
+}
+.jumbotron {
+    background-color: #a2a2a3;
+    color: #000;
+    text-align: center;
+    font-size: -3px;
+    border: solid 2px black;
+    border-radius: 0 !important;
+}
+    .jumbotron .black {
+        background: #a2a2a3;
+        color: #000;
+        text-align: center;
+        font-size: -1px;
+    }
+    .jumbotron .white {
+        background: #a2a2a3;
+        color: white;
+        text-align: center;
+        font-size: -1px;
+    }
+    .jumbotron img {
+        border: solid 2px black;
+    }
+    .jumbotron input {
+        text-align: center;
+        border: solid 2px black;
+        padding: 20px 0 20px 0;
+    }
+    .jumbotron div {
+        padding: .12em .25em .12em .25em;
+    }
+
+
+    .jumbotron .btn {
+        background-color: #BF0E14;
+        color: white;
+        border-radius: 0px;
+        -webkit-transition: all .3s ease-in-out;
+        -moz-transition: all .3s ease-in-out;
+        -o-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out;
+       margin-left:0px;
+    }
+    .jumbotron a {
+        border: solid 2px black;
+        width: 100%;
+    }
+
+.btn-default {
+    color: #333;
+    background-color: #E3E3EA;
+    border-color: #ccc;
+}
+
+.jumbotron.profile {
+    padding: 0px;
+}
+
+
+.profile {
+    margin: 20px 0;
+}
+
+.profile-userpic img {
+    float: none;
+    margin: 0 auto;
+    width: 70%;
+    height: 70%;
+    -webkit-border-radius: 50% !important;
+    -moz-border-radius: 50% !important;
+    border-radius: 50% !important;
+}
+
+.profile-usertitle {
+    text-align: center;
+    margin: 20px 30px 20px 30px;
+    background-color:
+}
+
+.profile-usertitle-name {
+    border: solid 2px black;
+    padding: 6px !important;
+    height: 35px;
+    vertical-align: middle;
+    background-color: #E3E3EA;
+}
+
+.profile-usertitle-groups {
+    border: solid 2px black;
+    padding-top: 20px;
+    min-height: 91px;
+    vertical-align: middle;
+    background-color: #E3E3EA;
+}
+
+.profile-usertitle-activity {
+    border: solid 2px black;
+    padding: 20px !important;
+    height: 390px;
+    background-color: #E3E3EA;
+    color: #000;
+    vertical-align: middle;
+}
+
+.profile-userbuttons {
+    text-align: center;
+    margin-top: 10px;
+}
+
+    .profile-userbuttons .btn {
+        text-transform: uppercase;
+        font-size: 11px;
+        font-weight: 600;
+        padding: 6px 15px;
+        margin-right: 5px;
+    }
+
+        .profile-userbuttons .btn:last-child {
+            margin-right: 0px;
+        }
+
+.profile-usermenu {
+    margin-top: 30px;
+}
+
+    .profile-usermenu ul li {
+        border-bottom: 1px solid #f0f4f7;
+    }
+
+        .profile-usermenu ul li:last-child {
+            border-bottom: none;
+        }
+
+        .profile-usermenu ul li a {
+            color: #93a3b5;
+            font-size: 14px;
+            font-weight: 400;
+        }
+
+            .profile-usermenu ul li a i {
+                margin-right: 8px;
+                font-size: 14px;
+            }
+
+            .profile-usermenu ul li a:hover {
+                background-color: #fafcfd;
+                color: #5b9bd1;
+            }
+
+        .profile-usermenu ul li.active {
+            border-bottom: none;
+        }
+
+            .profile-usermenu ul li.active a {
+                color: #5b9bd1;
+                background-color: #f6f9fb;
+                border-left: 2px solid #5b9bd1;
+                margin-left: -2px;
+            }
+
+.profile-content {
+    padding: 80px 80px 0 80px !important;
+}
+
+
+
+.glyphicon-ring {    
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;    
+    color: white;
+    display: inline-table;
+    text-align: center;
+}
+
+    .glyphicon-ring .glyphicon-bordered {
+        font-size: 20px;
+        vertical-align: middle;
+        display: table-cell;
+    }
+
+.glyphicon-white {
+    background: white;
+    color: black;
+    border: 4px solid black;
+}
+
+.glyphicon-teal {
+    background: teal;
+    color: orange;
+}
+
+.glyphicon-red {
+    background: red;
+}
+
+
+.jumbotron.cp {
+    padding-top:20px !important;
+}
+
+
+.createPost {
+    border: solid 2px black;
+    padding: 0 !important;
+}
+    .createPost .header {
+        padding: 5px;
+        background-color: #000;
+        color: #fff;
+        font-weight: bold;
+        font-size: large;
+        border-bottom:2px solid black;
+    }
+    .createPost .body {
+        padding: 5px;
+        background-color: #E3E3EA;
+        color: black;
+        min-height: 250px;
+    }
+
+.userPost {
+    border: solid 2px black;
+    padding: 0 !important;
+}
+    .userPost .header {
+        padding: 5px;
+        background-color: #E3E3EA;
+        color: black;
+        font-weight: bold;
+        text-align: left;
+        padding: 10px !important;
+    }
+        .userPost .header img {
+            border: 0;
+            width: 60px;
+        }
+        .userPost .header .author {
+            color: #BF0E14;
+        }
+        .userPost .header .date {
+            float:right;
+            padding-top: 15px;
+        }
+    .userPost .body {
+        padding: 5px;
+        background-color: #E3E3EA;
+        color: #000;
+        font-weight: bold;
+    }
+
+.titlebar
+{
+    text-align:left;
+    padding: 10px !important;
+}
+    .titlebar img {
+        border: 0;
+        width: 60px;
+    }
+
+.newsArea {
+    padding: 10px 20px 20px 20px !important;
+}
+
+.jumbotron.newsArea {
+  
+    min-height: 320px;
+}
+
+.bodyButton {
+    text-align: center;
+    border: solid 2px black;
+    width: 250px;
+}
+
+.jumbotron.messages {
+    padding-top: 10px;
+}
+    .jumbotron.messages .header {
+        padding:20px;
+    }
+        .jumbotron.messages .header .add {
+            float: right;
+            width: 60px;
+
+            color: black;
+ 
+            border: solid 2px black;
+            font-size:larger;
+            font-weight: bold;
+            padding-bottom:0px !important;
+        }
+    .jumbotron.messages .body {
+        background-color: #E3E3EA;
+        border: solid 2px black;
+        min-height: 600px;
+    }
+
+.admin-usertitle-name {
+    border: solid 2px black;
+    padding: 6px !important;
+    height: 35px;
+    vertical-align: middle;
+    background-color: #a2a2a3;
+}
+
+.group-usertitle-groups {
+    border: solid 2px black;
+    padding-top: 20px;
+    min-height: 311px;
+    vertical-align: middle;
+    background-color: #E3E3EA;
+}
+
+.editText
+{
+    width:300px;
+}
